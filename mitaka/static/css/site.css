@@ -1,0 +1,373 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+div.about {
+    margin-left: auto;
+    margin-right: auto;
+}
+img.me {
+    float: left;
+}
+img.text {
+    float: left;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+div.copyright {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.copyright {
+    padding-top: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+div.testmain {
+    width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#main {
+    width: 700px;
+    height: 556px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+div.main {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+img.me {
+    margin-top: 30px;
+}
+div.porta {
+    width: 600px;
+    height: 120px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+div.portb {
+    width: 600px;
+    height: 120px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+div.portc {
+    width: 600px;
+    height: 120px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+div.butta {
+    float: left;
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 25px;    
+}
+div.buttb {
+    float: left;
+    padding-top: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+div.buttc {
+    float: left;
+    padding-top: 30px;
+    padding-left: 25px;
+    padding-right: 0px;
+}
+div.storyfront {
+    width: 700px;
+    height: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+img.story {
+    float: left;
+    width: 700px;
+    height: 200px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+img.storyleft {
+    padding-right: 10px;
+}
+img.storyright {
+    padding-left: 10px;
+}
+div.gallery {
+    padding-top: 20px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.home {
+    padding-top: 10px;
+    float: right;
+}
+img.storybutton {
+    float: left;
+}
+body {
+    background-color: #dadbcf;
+}
+div.name {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    padding-top: 80px;
+    padding-bottom: 10px;
+}
+div.names {
+    margin-left: auto;
+    margin-right: auto;
+    width: 640px;
+}
+div.bwrapper {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.images {
+    width: 700px;
+    padding-top: 14px;
+}
+div.buttons {
+    width: 700px;
+}
+div.buttonleft {
+    clear: left;
+    float: left;
+    margin-left: 38px;
+    margin-right: 4px;
+    margin-bottom: 14px;
+}
+div.buttonmiddle {
+    float: left;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 14px;
+}
+div.buttonright {
+    float: left;
+    margin-left: 4px;
+    margin-right: 38px;
+    margin-bottom: 14px;
+}
+div.imageleft {
+    float: left;
+    margin-left: 38px;
+    margin-right: 4px;
+    margin-bottom: 10px;
+}
+div.imagemiddle {
+    float: left;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 10px;
+}
+div.imageright {
+    float: left;
+    margin-left: 4px;
+    margin-right: 38px;
+    margin-bottom: 10px;
+}
+div.stories {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 200px;
+}
+div.storyleft {
+    float: left;
+    padding: 5px;
+    margin-left: 65px;
+    margin-right: 5px;
+}
+div.storymiddle {
+    float: left;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+div.storyright {
+    float: left;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 65px;
+}
+div.square {
+    width: 600px;
+}
+div.nbs {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+div.back {
+    margin-left: 50px;
+    margin-right: 50px;
+    float: left;
+}
+div.next {
+    margin-left: 50px;
+    margin-right: 50px;
+    float: left;
+}
+div.nextspecial {
+    float: left;
+    margin-left: 350px;
+    margin-right: 50px;
+}
+div.fourbuttons {
+    width: 700px;
+    height: 54px;
+    background-color: #bebfb3;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.btns {
+    float: left;
+}
+/*img.lsq {
+    float: left;
+    padding-right: 10px;
+}
+img.msq {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+img.rsq {
+    float: left;
+    padding-left: 10px; 
+}
+img.medl {
+    float: left;
+    padding-right: 20px;
+}
+img.sqr {
+    float: left;
+    padding-left: 20px;
+}*/
+div.row1 {
+    width: 920px;
+    padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.row2 {
+    width: 920px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+img.lsq {
+    float: left;
+    padding-right: 5px;
+}
+img.msq {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+img.rsq {
+    float: left;
+    padding-left: 5px;  
+}
+img.medl, img.longl, img.sql, img.vl {
+    float: left;
+    padding-right: 10px;
+}
+img.sqr, img.vr, img.medr, img.longr {
+    float: left;
+    padding-left: 10px;
+}
+div.wheelbuttons {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    clear: both;
+}
+img.nextwspec {
+    float: left;
+    padding-left: 480px;
+    padding-right: 20px;
+}
+img.backw {
+    float: left;
+    padding-left: 20px;
+    padding-right: 180px;
+}
+img.nextw {
+    float: left;
+    padding-left: 180px;
+    padding-right: 20px;
+}
