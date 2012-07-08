@@ -1,0 +1,42 @@
+{% extends "template.html" %}
+{% block head %}
+<style type="text/css">
+.galleft, .galmid, .galright {
+    float: left;
+    margin-top: 20px;
+    width: 160px;
+    height: 160px;
+}
+
+.galleft {
+    margin-right: 10px;
+}
+
+.galmid {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.galright {
+    margin-left: 10px;
+}
+</style>
+<link rel="stylesheet" href="/static/css/colorbox.css" />
+<script type="text/javascript" src="/static/js/jquery.colorbox-min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $(".cbox").colorbox({rel: 'group'});
+    });
+</script>
+{% endblock %}
+{% block body %}
+    {% include 'menu.html' %}
+    {% for x in images %}
+        <div class="{{ loop.cycle('galleft', 'galmid', 'galmid', 'galright') }}">
+            <a class="cbox" href="/static/images/gallery/{{name}}/{{x}}">
+                <img src="/static/images/gallery/{{name}}/thumbs/{{x}}">
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}
+

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %}Welcome{% endblock %} - Alena Sinacola</title>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(function () {
+                $(".b").mouseover(function () {
+                    $(this).fadeTo(250, 0);
+                }).mouseout (function () {
+                    $(this).fadeTo(250, 1);
+                }).each(function() {
+                    var hsrc = $(this).attr("src").replace(".png", "_.png");
+                    $(this).parent().parent().css('background-image', 'url('+hsrc+')');
+                });
+            });
+        </script>
+        <!-- google analytics -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-20932958-1']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <link rel="stylesheet" type="text/css" href="/static/css/site.css" />
+{% block head %}{% endblock %}
+    </head>
+    <body>
+        <div id="main">
+{% block body %}{% endblock %}
+        </div>
+    </body>
+</html>
