@@ -1,0 +1,27 @@
+{% extends "template.html" %}
+{% if pgid > 16 or pgid < 1 %}
+{% set pgid = 1 %}
+{% endif %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="/static/css/stories/ntbd.css" />
+{% endblock %}
+{% block body %}
+    {% include 'menu.html' %}
+    <div id="story">
+    <div class="square">
+        <a href="/stories/ntbd/{{pgid + 1}}"><img src="/static/images/stories/ntbd/ntbd{{pgid}}.jpg" /></a>
+    </div>
+    <div class="nbs">
+        {% if pgid == 1 %}
+            <div class="nextspecial"><a href="/stories/ntbd/{{pgid + 1}}"><img src="/static/images/stories/ntbd/next.png" /></a></div>
+        {% elif pgid == 16 %}
+            <div class="back"><a href="/stories/ntbd/{{pgid - 1}}"><img src="/static/images/stories/ntbd/back.png" /></a></div>
+            <div class="next"><a href="/"><img src="/static/images/stories/ntbd/home.png" /></a></div>
+        {% else %}
+            <div class="back"><a href="/stories/ntbd/{{pgid - 1}}"><img src="/static/images/stories/ntbd/back.png" /></a></div>
+            <div class="next"><a href="/stories/ntbd/{{pgid + 1}}"><img src="/static/images/stories/ntbd/next.png" /></a></div>
+        {% endif %}
+    </div>
+    </div>
+{% endblock %}
+
