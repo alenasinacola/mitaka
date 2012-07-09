@@ -17,6 +17,10 @@ def root():
 def rootpage(name):
     return render_template("%s.html"%name)
 
+@app.route('/stories/<name>/<pgid>')
+def story(name, pgid):
+    return render_template("stories/%s.html"%name, pgid=int(pgid))
+
 @app.route('/gallery/<name>.html')
 def gallery(name):
     gpath = os.path.join(app.static_folder, 'images', 'gallery', name)
