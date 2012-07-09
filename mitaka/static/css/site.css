@@ -259,62 +259,6 @@ div.storyright {
     margin-left: 5px;
     margin-right: 65px;
 }
-div.square {
-    width: 600px;
-}
-div.nbs {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-}
-div.back {
-    margin-left: 50px;
-    margin-right: 50px;
-    float: left;
-}
-div.next {
-    margin-left: 50px;
-    margin-right: 50px;
-    float: left;
-}
-div.nextspecial {
-    float: left;
-    margin-left: 350px;
-    margin-right: 50px;
-}
-div.fourbuttons {
-    width: 700px;
-    height: 54px;
-    background-color: #bebfb3;
-    margin-top: 80px;
-    margin-left: auto;
-    margin-right: auto;
-}
-div.btns {
-    float: left;
-}
-/*img.lsq {
-    float: left;
-    padding-right: 10px;
-}
-img.msq {
-    float: left;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-img.rsq {
-    float: left;
-    padding-left: 10px; 
-}
-img.medl {
-    float: left;
-    padding-right: 20px;
-}
-img.sqr {
-    float: left;
-    padding-left: 20px;
-}*/
 div.row1 {
     width: 920px;
     padding-top: 40px;
