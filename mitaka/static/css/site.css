@@ -45,17 +45,19 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-div.about {
+.about {
     margin-left: auto;
     margin-right: auto;
+    width: 700px;
 }
-img.me {
-    float: left;
+.me {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
-img.text {
+.text {
     float: left;
     padding-top: 30px;
-    padding-left: 50px;
 }
 div.copyright {
     width: 600px;
@@ -145,18 +147,12 @@ div.storyfront {
     margin-bottom: 10px;
     margin-top: 20px;
 }
-img.story {
-    float: left;
+.storybar {
     width: 700px;
-    height: 200px;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-top: 20px;
 }
-img.storyleft {
-    padding-right: 10px;
-}
-img.storyright {
-    padding-left: 10px;
+.storyleft {
+    padding-right: 35px;
 }
 div.gallery {
     padding-top: 20px;

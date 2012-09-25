@@ -13,6 +13,10 @@ app = Flask(__name__)
 def root():
     return render_template('index.html')
 
+@app.route('/portfolio.html')
+def portfolio():
+    return gallery('portfolio')
+
 @app.route('/<name>.html') # keep .html for stylistic reasons
 def rootpage(name):
     return render_template("%s.html"%name)
@@ -29,6 +33,7 @@ def gallery(name):
     if not os.path.exists(os.path.join(gpath, 'thumbs')):
         os.mkdir(os.path.join(gpath, 'thumbs'))
     gimages = glob.glob(os.path.join(gpath, '*.jpg'))
+    gimages += glob.glob(os.path.join(gpath, '*.png'))
     for image in gimages:
         bn = os.path.basename(image)
         thumb = os.path.join(gpath, 'thumbs', bn)
@@ -50,8 +55,8 @@ def gallery(name):
             tim.thumbnail(size, Image.ANTIALIAS)
             tim.save(thumb, 'JPEG')
     return render_template("gallery.html", name=name,
-                                           images=[os.path.basename(x) for x in gimages])
+                                           images=sorted([os.path.basename(x) for x in gimages]))
 
 if __name__ == '__main__':
     app.debug = True
-    app.run()
+    app.run(host='0.0.0.0')

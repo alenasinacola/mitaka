@@ -1,0 +1,80 @@
+.style1, .style2, .style3, .style4, .style5 {
+    margin-top: 20px;
+}
+
+.one, .two, .three {
+    margin: 0px;
+}
+
+.style1 > .one,
+.style1 > .two,
+.style1 > .three {
+    width: 230px;
+}
+
+.style1 > .one,
+.style1 > .two {
+    margin-right: 5px;
+}
+
+.style2 > .one {
+    width: 460px;
+    margin-right: 10px;
+}
+
+.style2 > .two {
+    width: 230px;
+}
+
+.style3 > .one {
+    width: 575px;
+    margin-right: 10px;
+}
+
+.style3 > .two {
+    width: 115px;
+}
+
+.style4 > .one {
+    width: 230px;
+    margin-right: 10px;
+}
+
+.style4 > .two {
+    width: 460px;
+}
+
+.style5 > .one {
+    width: 115px;
+    margin-right: 10px;
+}
+
+.style5 > .two {
+    width: 575px;
+}
+
+.buttons {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    clear: both;
+}
+
+.nextsp {
+    float: left;
+    padding-left: 470px;
+    padding-right: 70px;
+}
+
+.back {
+    float: left;
+    padding-left: 70px;
+    padding-right: 120px;
+}
+
+.next {
+    float: left;
+    padding-left: 120px;
+    padding-right: 70px;
+}

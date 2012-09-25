@@ -1,0 +1,83 @@
+{% extends "template.html" %}
+{% if pgid > 8 or pgid < 1 %}
+{% set pgid = 1 %}
+{% endif %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="/static/css/stories/wheels.css" />
+{% endblock %}
+{% block body %}
+    {% include 'menu.html' %}
+    {% if pgid == 1 %}
+    {# yeah, this is inelegant and redundant.  so's your mom #}
+    <div class="style1">
+        <img class="one" src="/static/images/stories/wheels/wheels1.jpg" /><img class="two" src="/static/images/stories/wheels/wheels2.jpg" /><img class="three" src="/static/images/stories/wheels/wheels3.jpg" />
+    </div>
+    <div class="style2">
+        <img class="one" src="/static/images/stories/wheels/wheels4.jpg" /><img class="two" src="/static/images/stories/wheels/wheels5.jpg" />
+    </div>
+    {% elif pgid == 2 %}
+    <div class="style3">
+        <img class="one" src="/static/images/stories/wheels/wheels6.jpg" /><img class="two" src="/static/images/stories/wheels/wheels7.jpg" />
+    </div>
+    <div class="style4">
+        <img class="one" src="/static/images/stories/wheels/wheels8.jpg" /><img class="two" src="/static/images/stories/wheels/wheels9.jpg" />
+    </div>
+    {% elif pgid == 3 %}
+    <div class="style5">
+        <img class="one" src="/static/images/stories/wheels/wheels10.jpg" /><img class="two" src="/static/images/stories/wheels/wheels11.jpg" />
+    </div>
+    <div class="style2">
+        <img class="one" src="/static/images/stories/wheels/wheels12.jpg" /><img class="two" src="/static/images/stories/wheels/wheels13.jpg" />
+    </div>
+    {% elif pgid == 4 %}
+    <div class="style4">
+        <img class="one" src="/static/images/stories/wheels/wheels14.jpg" /><img class="two" src="/static/images/stories/wheels/wheels15.jpg" />
+    </div>
+    <div class="style3">
+        <img class="one" src="/static/images/stories/wheels/wheels16.jpg" /><img class="two" src="/static/images/stories/wheels/wheels17.jpg" />
+    </div>
+    {% elif pgid == 5 %}
+    <div class="style4">
+        <img class="one" src="/static/images/stories/wheels/wheels18.jpg" /><img class="two" src="/static/images/stories/wheels/wheels19.jpg" />
+    </div>
+    <div class="style3">
+        <img class="one" src="/static/images/stories/wheels/wheels20.jpg" /><img class="two" src="/static/images/stories/wheels/wheels21.jpg" />
+    </div>
+    {% elif pgid == 6 %}
+    <div class="style1">
+        <img class="one" src="/static/images/stories/wheels/wheels22.jpg" /><img class="two" src="/static/images/stories/wheels/wheels23.jpg" /><img class="three" src="/static/images/stories/wheels/wheels24.jpg" />
+    </div>
+    <div class="style1">
+        <img class="one" src="/static/images/stories/wheels/wheels25.jpg" /><img class="two" src="/static/images/stories/wheels/wheels26.jpg" /><img class="three" src="/static/images/stories/wheels/wheels27.jpg" />
+    </div>
+    {% elif pgid == 7 %}
+    <div class="style4">
+        <img class="one" src="/static/images/stories/wheels/wheels28.jpg" /><img class="two" src="/static/images/stories/wheels/wheels29.jpg" />
+    </div>
+    <div class="style2">
+        <img class="one" src="/static/images/stories/wheels/wheels30.jpg" /><img class="two" src="/static/images/stories/wheels/wheels31.jpg" />
+    </div>
+    {% elif pgid == 8 %}
+    <div class="style3">
+        <img class="one" src="/static/images/stories/wheels/wheels32.jpg" /><img class="two" src="/static/images/stories/wheels/wheels33.jpg" />
+    </div>
+    <div class="style4">
+        <img class="one" src="/static/images/stories/wheels/wheels34.jpg" /><img class="two" src="/static/images/stories/wheels/wheels35.jpg" />
+    </div>
+    {% endif %}
+    {% if pgid == 1 %}
+    <div class="buttons">
+            <a href="/stories/wheels/{{pgid + 1}}"><img class="nextsp" src="/static/images/stories/wheels/nextwheels.png" /></a>
+    </div>
+    {% elif pgid == 8 %}
+    <div class="buttons">
+            <a href="/stories/wheels/{{pgid - 1}}"><img class="back" src="/static/images/stories/wheels/backwheels.png" /></a><!--
+         --><a href="/stories.html"><img class="next" src="/static/images/stories/wheels/homewheels.png" /></a>
+    </div>
+    {% else %}
+    <div class="buttons">
+            <a href="/stories/wheels/{{pgid - 1}}"><img class="back" src="/static/images/stories/wheels/backwheels.png" /></a><!--
+         --><a href="/stories/wheels/{{pgid + 1}}"><img class="next" src="/static/images/stories/wheels/nextwheels.png" /></a>
+    </div>
+    {% endif %}
+{% endblock %}

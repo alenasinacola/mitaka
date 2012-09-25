@@ -9,14 +9,18 @@
     {% include 'menu.html' %}
     <div id="story">
     <div class="square">
+        {% if pgid < 16 %}
         <a href="/stories/hop/{{pgid + 1}}"><img src="/static/images/stories/hop/hop{{pgid}}.jpg" /></a>
+        {% else %}
+        <a href="/stories.html"><img src="/static/images/stories/hop/hop{{pgid}}.jpg" /></a>
+        {% endif %}
     </div>
     <div class="nbs">
         {% if pgid == 1 %}
             <div class="nextspecial"><a href="/stories/hop/{{pgid + 1}}"><img src="/static/images/stories/hop/next.png" /></a></div>
         {% elif pgid == 16 %}
             <div class="back"><a href="/stories/hop/{{pgid - 1}}"><img src="/static/images/stories/hop/back.png" /></a></div>
-            <div class="next"><a href="/"><img src="/static/images/stories/hop/home.png" /></a></div>
+            <div class="next"><a href="/stories.html"><img src="/static/images/stories/hop/home.png" /></a></div>
         {% else %}
             <div class="back"><a href="/stories/hop/{{pgid - 1}}"><img src="/static/images/stories/hop/back.png" /></a></div>
             <div class="next"><a href="/stories/hop/{{pgid + 1}}"><img src="/static/images/stories/hop/next.png" /></a></div>
