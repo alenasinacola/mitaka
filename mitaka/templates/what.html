@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="/static/css/what.css" />
+{% endblock %}
+{% block body %}
+    {% include 'menu.html' %}
+    <div class="panels">
+    <img style="float: left; margin-right: 60px;" src="/static/images/what/banner.jpg" />
+    {% for d in dates %}
+        <div class="{{ loop.cycle('panel', 'endpanel', 'panel', 'panel') }}">
+            <a href="/what/{{d}}"><img src="/static/images/what/{{d}}/thumb.jpg"></a>
+            <p class="date">{{ d|prettydate }}</p>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+

@@ -1,13 +1,23 @@
 #!/usr/bin/env python
 
 import os
+import re
 import glob
+import datetime
 
 from PIL import Image
 
 from flask import Flask, render_template
 
 app = Flask(__name__)
+
+@app.template_filter('prettydate')
+def pretty_date(udate):
+    try:
+        dt = datetime.datetime.strptime(udate, "%Y-%m-%d")
+    except:
+        return "Unknown Date"
+    return dt.strftime("%d %B %Y")
 
 @app.route('/')
 def root():
@@ -17,9 +27,26 @@ def root():
 def portfolio():
     return gallery('portfolio')
 
+@app.route('/what.html')
+def weekwhat():
+    wpath = os.path.join(app.static_folder, 'images', 'what')
+    if not os.path.exists(wpath):
+        return render_template('what.html', dates=[])
+    rex = re.compile("\d{4}-\d{2}-\d{2}")
+    opts = os.listdir(wpath)
+    dates = [x for x in opts if rex.match(x)]
+    return render_template('what.html', dates=sorted(dates, reverse=True))
+
 @app.route('/<name>.html') # keep .html for stylistic reasons
 def rootpage(name):
     return render_template("%s.html"%name)
+
+@app.route('/what/<date>')
+def what(date):
+    wpath = os.path.join(app.static_folder, 'images', 'what', date)
+    if not os.path.exists(wpath):
+        return weekwhat()
+    return render_template('what/index.html', d=date)
 
 @app.route('/stories/<name>/<pgid>')
 def story(name, pgid):
