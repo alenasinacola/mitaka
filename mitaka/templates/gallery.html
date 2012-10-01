@@ -4,8 +4,8 @@
 .galleft, .galmid, .galright {
     float: left;
     margin-top: 20px;
-    width: 160px;
-    height: 160px;
+    width: 220px;
+    height: 220px;
 }
 
 .galleft {
@@ -32,7 +32,7 @@
 {% block body %}
     {% include 'menu.html' %}
     {% for x in images %}
-        <div class="{{ loop.cycle('galleft', 'galmid', 'galmid', 'galright') }}">
+        <div class="{{ loop.cycle('galleft', 'galmid', 'galright') }}">
             <a class="cbox" href="/static/images/gallery/{{name}}/{{x}}">
                 <img src="/static/images/gallery/{{name}}/thumbs/{{x}}">
             </a>
