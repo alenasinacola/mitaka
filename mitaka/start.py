@@ -23,10 +23,6 @@ def pretty_date(udate):
 def root():
     return render_template('index.html')
 
-@app.route('/portfolio.html')
-def portfolio():
-    return gallery('portfolio')
-
 @app.route('/what.html')
 def weekwhat():
     wpath = os.path.join(app.static_folder, 'images', 'what')

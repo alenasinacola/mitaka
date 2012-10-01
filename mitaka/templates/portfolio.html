@@ -1,8 +1,17 @@
 {% extends "template.html" %}
+{% block head %}
+    <style type="text/css">
+        .pbanner {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            width: 480px;
+        }
+    </style>
+{% endblock %}
 {% block body %}
     {% include 'menu.html' %}
-    <div class="porta"><a href="/gallery/illustration.html"><img class="b" src="/static/images/illport.png" /></a></div>
-    <div class="portb"><a href="/gallery/figure.html"><img class="b" src="/static/images/figport.png" /></a></div>
-    <div class="portc"><a href="/gallery/digital.html"><img class="b" src="/static/images/digport.png" /></a></div>
+    <div class="pbanner"><a href="/gallery/illustration.html"><img src="/static/images/portfolio/illustration.jpg" /></a></div>
+    <div class="pbanner"><a href="/gallery/figure.html"><img src="/static/images/portfolio/figure.jpg" /></a></div>
 {% endblock %}
 
