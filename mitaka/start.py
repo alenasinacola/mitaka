@@ -42,7 +42,8 @@ def what(date):
     wpath = os.path.join(app.static_folder, 'images', 'what', date)
     if not os.path.exists(wpath):
         return weekwhat()
-    return render_template('what/index.html', d=date)
+    whats = sorted([os.path.basename(x) for x in glob.glob(os.path.join(wpath, 'what*.jpg'))]) # blech
+    return render_template('what/index.html', d=date, whats=whats)
 
 @app.route('/stories/<name>/<pgid>')
 def story(name, pgid):
