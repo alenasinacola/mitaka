@@ -1,6 +1,8 @@
 {% extends "template.html" %}
 {% block head %}
     <link rel="stylesheet" type="text/css" href="/static/css/what.css" />
+    <!-- facebook bullshittery.  this has to have the server part, even though facebook pulls down the right image anyway -->
+    <meta property="og:image" content="http://alenasinacola.net/static/images/what/{{d}}/thumb.jpg" />
 {% endblock %}
 {% block body %}
     {% include 'menu.html' %}
