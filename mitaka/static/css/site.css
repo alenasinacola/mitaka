@@ -197,38 +197,38 @@ div.buttons {
 div.buttonleft {
     clear: left;
     float: left;
-    margin-left: 38px;
-    margin-right: 4px;
+    margin-left: 35px;
+    margin-right: 5px;
     margin-bottom: 14px;
 }
 div.buttonmiddle {
     float: left;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 14px;
 }
 div.buttonright {
     float: left;
-    margin-left: 4px;
-    margin-right: 38px;
+    margin-left: 5px;
+    margin-right: 35px;
     margin-bottom: 14px;
 }
 div.imageleft {
     float: left;
-    margin-left: 38px;
-    margin-right: 4px;
+    margin-left: 35px;
+    margin-right: 5px;
     margin-bottom: 10px;
 }
 div.imagemiddle {
     float: left;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 10px;
 }
 div.imageright {
     float: left;
-    margin-left: 4px;
-    margin-right: 38px;
+    margin-left: 5px;
+    margin-right: 35px;
     margin-bottom: 10px;
 }
 div.stories {
