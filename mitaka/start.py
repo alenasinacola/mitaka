@@ -43,7 +43,12 @@ def what(date):
     if not os.path.exists(wpath):
         return weekwhat()
     whats = sorted([os.path.basename(x) for x in glob.glob(os.path.join(wpath, 'what*.jpg'))]) # blech
-    return render_template('what/index.html', d=date, whats=whats)
+    title = None
+    tfile = os.path.join(wpath, 'title.txt')
+    if os.path.exists(tfile):
+        with open(tfile) as tf:
+            title = tf.read().strip()
+    return render_template('what/index.html', d=date, whats=whats, title=title)
 
 @app.route('/stories/<name>/<pgid>')
 def story(name, pgid):

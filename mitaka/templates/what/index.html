@@ -3,11 +3,14 @@
     <link rel="stylesheet" type="text/css" href="/static/css/what.css" />
     <!-- facebook bullshittery.  this has to have the server part, even though facebook pulls down the right image anyway -->
     <meta property="og:image" content="http://alenasinacola.net/static/images/what/{{d}}/thumb.jpg" />
+    {% if title %}
+        <meta property="og:title" content="{{ title }}" />
+    {% endif %}
 {% endblock %}
 {% block body %}
     {% include 'menu.html' %}
     {% for what in whats %}
-        <a href="/what.html"><img class="wdsp" src="/static/images/what/{{d}}/{{what}}" /></a>
+        <a href="/what.html"><img title="{{ title }}" class="wdsp" src="/static/images/what/{{d}}/{{what}}" /></a>
     {% endfor %}
     <div style="clear:both"></div>
 {% endblock %}
