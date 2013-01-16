@@ -7,7 +7,7 @@ import datetime
 
 from PIL import Image
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -25,17 +25,34 @@ def root():
 
 @app.route('/what.html')
 def weekwhat():
+    page = request.args.getlist("p")
+    if page:
+        page = int(page[0])
+    else:
+        page = 1
     wpath = os.path.join(app.static_folder, 'images', 'what')
     if not os.path.exists(wpath):
         return render_template('what.html', dates=[])
     rex = re.compile("\d{4}-\d{2}-\d{2}")
     opts = os.listdir(wpath)
     dates = [x for x in opts if rex.match(x)]
-    return render_template('what.html', dates=sorted(dates, reverse=True))
+    titles = {}
+    for d in dates:
+        titles[d] = getwhattitle(d)
+    return render_template('what.html', dates=sorted(dates, reverse=True), page=page, titles=titles)
 
 @app.route('/<name>.html') # keep .html for stylistic reasons
 def rootpage(name):
     return render_template("%s.html"%name)
+
+def getwhattitle(date):
+    title = None
+    wpath = os.path.join(app.static_folder, 'images', 'what', date)
+    tfile = os.path.join(wpath, 'title.txt')
+    if os.path.exists(tfile):
+        with open(tfile) as tf:
+            title = tf.read().strip()
+    return title
 
 @app.route('/what/<date>')
 def what(date):
@@ -43,11 +60,7 @@ def what(date):
     if not os.path.exists(wpath):
         return weekwhat()
     whats = sorted([os.path.basename(x) for x in glob.glob(os.path.join(wpath, 'what*.jpg'))]) # blech
-    title = None
-    tfile = os.path.join(wpath, 'title.txt')
-    if os.path.exists(tfile):
-        with open(tfile) as tf:
-            title = tf.read().strip()
+    title = getwhattitle(date)
     return render_template('what/index.html', d=date, whats=whats, title=title)
 
 @app.route('/stories/<name>/<pgid>')

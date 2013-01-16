@@ -5,13 +5,31 @@
 {% block body %}
     {% include 'menu.html' %}
     <div class="panels">
-    <img style="float: left; margin-right: 60px;" src="/static/images/what/banner.jpg" />
-    {% for d in dates %}
-        <div class="{{ loop.cycle('panel', 'endpanel', 'panel', 'panel') }}">
-            <a href="/what/{{d}}"><img src="/static/images/what/{{d}}/thumb.jpg"></a>
-            <p class="date">{{ d|prettydate }}</p>
-        </div>
-    {% endfor %}
+    {% if page == 1 %}
+        <img style="float: left; margin-right: 60px;" src="/static/images/what/banner.jpg" />
+        {% for d in dates[0:6] %}
+            <div class="{{ loop.cycle('panel', 'endpanel', 'panel', 'panel') }}">
+                <a href="/what/{{d}}"><img title="{{ titles[d] }}" src="/static/images/what/{{d}}/thumb.jpg"></a>
+                <p class="date">{{ d|prettydate }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        {% for d in dates[6 + ((page-2)*8):6+((page-1)*8)] %}
+            <div class="{{ loop.cycle('panel', 'panel', 'panel', 'endpanel') }}">
+                <a href="/what/{{d}}"><img title="{{ titles[d] }}" src="/static/images/what/{{d}}/thumb.jpg"></a>
+                <p class="date">{{ d|prettydate }}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+    </div>
+    <div class="wnav" style="clear: both; padding-top: 20px;">
+        {% if page > 1 %}
+            <a href="?p={{ page - 1 }}"><img style="float: left;" src="/static/images/what/backpage.jpg"></a>
+        {% endif %}
+        {% set len = dates[6+((page-1)*8):]|length %}
+        {% if len > 0 %}
+            <a href="?p={{ page + 1 }}"><img style="float: right;" src="/static/images/what/nextpage.jpg"></a>
+        {% endif %}
     </div>
 {% endblock %}
 
