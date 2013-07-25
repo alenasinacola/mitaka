@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+{% block head %}
+    <style type="text/css">
+        .pbanner {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            width: 480px;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    {% include 'menu.html' %}
+    <div class="pbanner"><a href="/what.html"><img src="/static/images/projects/weeklywhat.jpg" /></a></div>
+    <div class="pbanner"><a href="/stories.html"><img src="/static/images/projects/stories.jpg" /></a></div>
+{% endblock %}
+
