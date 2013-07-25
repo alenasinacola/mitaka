@@ -6,7 +6,7 @@
     {% include 'menu.html' %}
     <div class="panels">
     {% if page == 1 %}
-        <img style="float: left; margin-right: 60px;" src="/static/images/what/banner.jpg" />
+        <img style="float: left; margin-right: 60px;" src="/static/images/what/banner1.jpg" />
         {% for d in dates[0:6] %}
             <div class="{{ loop.cycle('panel', 'endpanel', 'panel', 'panel') }}">
                 <a href="/what/{{d}}"><img title="{{ titles[d] }}" src="/static/images/what/{{d}}/thumb.jpg"></a>

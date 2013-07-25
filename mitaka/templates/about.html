@@ -1,8 +1,17 @@
 {% extends "template.html" %}
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="/static/css/about.css" />
+{% endblock %}
 {% block body %}
     {% include 'menu.html' %}
-    <img style="display: block; margin-left: auto; margin-right: auto;" src="/static/images/about/main.jpg">
-    <a href="http://alenasinacola.blogspot.com/"><img style="float: left; margin-left: 60px;" src="/static/images/about/blogclick.jpg"></a>
-    <a href="mailto:alena@alenasinacola.net"><img style="float: right; margin-right: 60px;" src="/static/images/about/emailclick.jpg"></a>
+    <!--<div="aboutimage">
+		<img style="display: block; margin-left: auto; margin-right: auto;" src="/static/images/about/main2.jpg">
+	</div>-->
+	<div class="about">
+		<img id="aboutme" src="/static/images/about/aboutmain.jpg">
+		<p id="abouttext">I live in New England with my husband and two dogs, and I draw a lot. My sketchblog, which is updated on a seemingly random and mysterious schedule, can be found <a href="http://alenasinacola.blogspot.com/">here</a>. I also have <a href="mailto:alena@alenasinacola.net">an email address</a>.</p>
+    </div>
+	<!--<a href="http://alenasinacola.blogspot.com/"><img style="float: left; margin-left: 60px;" src="/static/images/about/blogclick.jpg"></a>
+    <a href="mailto:alena@alenasinacola.net"><img style="float: right; margin-right: 60px;" src="/static/images/about/emailclick.jpg"></a>-->
 {% endblock %}
 
