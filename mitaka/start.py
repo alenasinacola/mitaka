@@ -17,7 +17,10 @@ def pretty_date(udate):
         dt = datetime.datetime.strptime(udate, "%Y-%m-%d")
     except:
         return "Unknown Date"
-    return dt.strftime("%d %B %Y")
+    ftime = dt.strftime("%d %B %Y")
+    if ftime.startswith("0"):
+        ftime = ftime[1:]
+    return ftime
 
 @app.route('/')
 def root():
