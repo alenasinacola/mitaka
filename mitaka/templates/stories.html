@@ -2,15 +2,27 @@
 {% block head %}
     <style type="text/css">
         .pbanner {
-            margin-left: auto;
-            margin-right: auto;
+			float: left;
+            margin-left: 20px;
+            margin-right: 20px;
             margin-top: 30px;
-            width: 480px;
         }
+		
+		.pbannerx {
+			float: left;
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-top: 30px;
+		}
+		
+		img {
+			float: left;
+		}
     </style>
 {% endblock %}
 {% block body %}
     {% include 'menu.html' %}
-    <div class="pbanner"><a href="/stories/wheels/1"><img src="/static/images/stories/wheels.jpg" /></a></div>
-    <div class="pbanner"><a href="/stories/ntbd/1"><img src="/static/images/stories/ntbd.jpg" /></a></div>
+	<div class="pbanner"><a href="/gallery/sketches.html"><img src="/static/images/stories/sketchessmall.png" /></a></div>
+    <div class="pbannerx"><a href="/stories/wheels/1"><img src="/static/images/stories/wheelssmall.png" /></a></div>
+    <div class="pbanner"><a href="/stories/ntbd/1"><img src="/static/images/stories/ntbdsmall.png" /></a></div>
 {% endblock %}
