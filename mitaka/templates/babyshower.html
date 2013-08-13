@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Alena & Toby's Baby Shower</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/shower.css" />
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>
+            $(function () {
+                $(".b").mouseover(function () {
+                    $(this).fadeTo(250, 0);
+                }).mouseout (function () {
+                    $(this).fadeTo(250, 1);
+                }).each(function() {
+                    var hsrc = $(this).attr("src").replace(".png", "_.png");
+                    $(this).parent().parent().css('background-image', 'url('+hsrc+')');
+                });
+            });
+        </script>
+	</head>
+	<body>
+		<div class="main">
+			<img class="banner" src="/static/images/shower/banner.png" />
+			<div class="middle">
+				<img class="picture" src="/static/images/shower/elephant.jpg" />
+				<img class="text" src="/static/images/shower/welcome.jpg" />
+			</div>
+			<div class="buttons">
+				<div class="mbtnleft"><a href="http://www.amazon.com/gp/registry/registry.html/ref=cm_baby_ln_vw?ie=UTF8&homepageredirect=create&type=baby" /><img class="b" src="/static/images/shower/registry.png" /></a></div>
+				<div class="mbtn"><a href="/directions.html"><img class="b" src="/static/images/shower/directions.png" /></a></div>
+				<div class="mbtnright"><a href="mailto:njsinacola@gmail.com?subject=Alena's Baby Shower!"><img class="b" src="/static/images/shower/rsvp.png" /></a></div>
+			</div>
+		</div>
+	</body>
+</html>
