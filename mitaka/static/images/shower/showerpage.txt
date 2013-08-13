@@ -1,0 +1,5 @@
+background: #f9f9d7
+
+buttons: Microsoft New Tai Lue 32px; #213806
+
+directions text: 26px;
