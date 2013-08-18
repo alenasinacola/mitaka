@@ -11,7 +11,7 @@ div.main {
 	margin-right: auto;
 	padding-top: 20px;
 	/*border: 2px solid #531b76;*/
-	border: 2px solid #565656;
+	border: 3px solid #565656;
 	margin-top: 60px;
 }
 
@@ -19,15 +19,16 @@ p.banner {
 	width: 800px;
 	height: 100px;
 	text-align: center;
-	/*color: #531b76;
-	color: #30465d;*/
-	color: #577647;
-	font-family: verdana;
-	font-size: 30px;
+	/*color: #531b76;*/
+	color: #42026a;
+	/*color: #3c2e72;*/
+	font-family: georgia, serif;
+	font-size: 38px;
 }
 
 p.text {
 	padding-top: 30px;
+	padding-left: 20px;
 	width: 560px;
 	height: 380px;
 	margin-left: auto;
@@ -63,7 +64,7 @@ div.buttons {
 
 img.picture {
 	float: left;
-	padding-left: 40px;
+	padding-left: 70px;
 	padding-right: 20px;
 }
 
