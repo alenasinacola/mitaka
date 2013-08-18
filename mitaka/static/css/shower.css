@@ -19,10 +19,11 @@ p.banner {
 	width: 800px;
 	height: 100px;
 	text-align: center;
-	color: #531b76;
-	font-family: Georgia, serif;
+	/*color: #531b76;
+	color: #30465d;*/
+	color: #577647;
+	font-family: verdana;
 	font-size: 30px;
-	font-weight: bold;
 }
 
 p.text {
