@@ -11,7 +11,7 @@ div.main {
 	margin-right: auto;
 	padding-top: 20px;
 	/*border: 2px solid #531b76;*/
-	border: 3px solid #565656;
+	border: 3px solid #786d7e;
 	margin-top: 60px;
 }
 
@@ -19,9 +19,7 @@ p.banner {
 	width: 800px;
 	height: 100px;
 	text-align: center;
-	/*color: #531b76;*/
-	color: #42026a;
-	/*color: #3c2e72;*/
+	color: #6b5079;
 	font-family: verdana;
 	font-size: 34px;
 }
@@ -34,7 +32,8 @@ p.text {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: right;
-	color: #565656;
+	/*color: #565656;*/
+	color: #5e804f;
 	font-family: verdana;
 	font-size: 22px;
 }
